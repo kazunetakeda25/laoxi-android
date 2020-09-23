@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutProfile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <com.github.siyamed.shapeimageview.ImageViewProfile
+                    android:background="@color/White"
+                    android:id="@+id/imageViewProfile"
+                    android:layout_width="@dimen/image_height"
+                    android:layout_height="@dimen/image_width"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/dp_40"
+                    android:src="@drawable/avatar_icon"
+                    app:siStrokeCap="round"
+                    app:siStrokeJoin="round" />
+
+                <com.github.siyamed.shapeimageview.ImageViewProfile
+                    android:background="@color/White"
+                    android:id="@+id/imageViewCar"
+                    android:layout_width="@dimen/image_height"
+                    android:layout_height="@dimen/image_width"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:clickable="false"
+                    android:src="@drawable/avatar_icon"
+                    app:siBorderColor="@color/White"
+                    app:siBorderWidth="1.5dp"
+
+                    app:siStrokeCap="round"
+                    app:siStrokeJoin="round" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tIFName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:textColorHint="@color/colorPrimary">
+
+                            <com.driver.customclasses.CustomEditText
+                                android:id="@+id/edtFirstName"
+                                style="@style/EditTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/dp_5"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:focusable="false"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/fullname"
+                                android:inputType="text"
+                                app:fontName="@string/font_regular" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:background="@drawable/or_line" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tIEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <com.driver.customclasses.CustomEditText
+                        android:id="@+id/edtEmailAddress"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/register.email_address"
+                        android:inputType="textEmailAddress"
+                        app:fontName="@string/font_regular" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/or_line" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!--<Spinner
+                        android:id="@+id/spinnerCountryCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_weight="1.2"
+                        android:background="@null"
+                        android:clickable="false"></Spinner>-->
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tIPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_weight="1.6"
+                        android:textColorHint="@color/colorPrimary">
+
+                        <com.driver.customclasses.CustomEditText
+                            android:id="@+id/edtPhoneNumber"
+                            style="@style/EditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/dp_5"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="left|center_vertical"
+                            android:hint="phone number?"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:maxLength="15"
+                            app:fontName="@string/font_regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="1.4"
+                        android:background="@drawable/or_line" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1.6"
+                        android:background="@drawable/or_line" />
+
+                </LinearLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tIPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5">
+
+
+                    <com.driver.customclasses.CustomEditText
+                        android:id="@+id/edtPassword"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/change_password"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="left|center_vertical"
+                        android:inputType="text"
+                        android:text="Change Pasword"
+                        app:fontName="@string/font_bold" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_weight="1.6"
+                    android:background="@drawable/or_line"
+                    android:textColorHint="@color/colorPrimary" />
+
+                <!--  <android.support.design.widget.TextInputLayout
+                      android:id="@+id/tiCarType"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/dp_5">
+
+                      <com.laoxidriver.customclasses.CustomEditText
+                          android:id="@+id/edtCarType"
+                          style="@style/EditTextStyle"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/dp_40"
+                          android:layout_gravity="center"
+                          android:layout_margin="@dimen/dp_5"
+                          android:background="@null"
+                          android:ellipsize="end"
+
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:gravity="left|center_vertical"
+                          android:hint="car type"
+                          android:imeOptions="actionDone"
+                          android:inputType="phone"
+                          android:maxLength="15"
+                          android:text="oscar"
+                          app:fontName="@string/font_regular" />
+
+                  </android.support.design.widget.TextInputLayout>
+  -->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tiCarType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <com.driver.customclasses.CustomEditText
+                        android:id="@+id/edtCarType"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="left|center_vertical"
+                        android:hint="car type"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:textSize="@dimen/sp_20"
+                        app:fontName="@string/font_regular"
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/or_line" />
+
+                <com.driver.customclasses.CustomButton
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/rounded_corner_buttons_yellow"
+                    android:text="@string/update"
+                    android:textAllCaps="true"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="invisible"
+                    app:fontName="@string/font_regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

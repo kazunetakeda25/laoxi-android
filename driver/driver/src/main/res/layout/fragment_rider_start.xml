@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/mapRide"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lineardropoff"
+            map:cameraBearing="112.5"
+            map:cameraTargetLat="-26.531085"
+            map:cameraTargetLng="131.843581"
+            map:cameraTilt="0"
+            map:cameraZoom="6" />
+
+
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtPickupAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:hint="Pickup address"
+            android:padding="@dimen/dp_15"
+            android:lines="1"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/sp_15"
+            app:fontName="@string/font_regular" />
+
+        <LinearLayout
+            android:id="@+id/lineardropoff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPickupAddress">
+
+            <com.driver.customclasses.CustomTextView
+                android:id="@+id/txtDropoffAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@android:color/white"
+                android:hint="Dropoff address"
+                android:padding="@dimen/dp_15"
+                android:singleLine="true"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/sp_15"
+                android:visibility="gone"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@id/txtPickupAddress"
+            android:background="@android:color/darker_gray" />
+
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtDriverStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgGoogleNavigation"
+            android:layout_marginEnd="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toStartOf="@+id/imgGoogleNavigation"
+            android:background="@drawable/rectangle_new_gray"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:text="Start ride"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            app:fontName="@string/font_bold" />
+
+
+        <ImageView
+            android:layout_gravity="end"
+            android:id="@+id/imgGoogleNavigation"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/rectangle_new_gray"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/navi"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        android:background="@color/color_button_blue"
+        android:elevation="@dimen/dp_6"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_15">
+
+        <LinearLayout
+            android:id="@+id/layoutCallMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/ImgbtnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@null"
+                android:src="@drawable/cancel_icon_small" />
+
+            <ImageButton
+                android:id="@+id/imgbtnCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/message_icon_small" />
+
+        </LinearLayout>
+
+        <com.driver.util.PorterShapeImageView
+            android:background="@color/color_button_blue"
+            android:id="@+id/imageViewProfile"
+            android:layout_width="@dimen/image_width_medium"
+            android:layout_height="@dimen/image_width_medium"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            app:siShape="@drawable/image_bg"
+            app:siSquare="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/layoutCallMessage"
+            android:layout_toRightOf="@id/imageViewProfile"
+            android:paddingLeft="@dimen/dp_5">
+
+            <com.driver.customclasses.CustomTextView
+                android:id="@+id/txtHi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|top"
+                android:singleLine="false"
+                android:text="@string/map.bottom_text_hi"
+                android:textColor="@color/text_color_yellow"
+                android:textSize="@dimen/sp_24"
+                app:fontName="@string/font_bold" />
+
+            <com.driver.customclasses.CustomTextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHi"
+                android:layout_marginTop="-3dp"
+                android:background="@null"
+                android:gravity="left|top"
+                android:singleLine="true"
+                android:text="@string/map.bottom_text_i_am"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_16"
+                app:fontName="@string/font_bold" />
+
+
+            <ImageView
+                android:id="@+id/imageViewComma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/txtName"
+                android:layout_toRightOf="@id/txtName"
+                android:paddingLeft="@dimen/dp_2"
+                android:src="@drawable/comma_50" />
+
+            <com.driver.customclasses.CustomTextView
+                android:id="@+id/txtBottomTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName"
+                android:background="@null"
+
+                android:gravity="left|top"
+                android:text="@string/can_t_wait_to_meet_you"
+                android:textAllCaps="true"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_9"
+                app:fontName="@string/font_regular" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

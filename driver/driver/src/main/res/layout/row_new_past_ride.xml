@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/dp_10"
+              android:layout_marginLeft="@dimen/dp_15"
+              android:layout_marginRight="@dimen/dp_15"
+              android:layout_marginTop="@dimen/dp_10"
+              android:background="@drawable/driver_past_row_back"
+              android:orientation="horizontal">
+    <com.github.siyamed.shapeimageview.ImageViewPastRide
+        android:id="@+id/imageViewProfile"
+        android:layout_width="@dimen/image_height_medium"
+        android:layout_height="@dimen/image_height_medium"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_5"
+        android:src="@drawable/profile"
+        app:siStrokeCap="round"
+        app:siStrokeJoin="round"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtRideId"
+            style="@style/Pastride_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/pastride.textview_text_rideid"
+            android:textColor="@color/pastride_textcolor_amount"
+            android:textSize="@dimen/sp_16"
+            app:fontName="@string/font_bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <com.driver.customclasses.CustomTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@null"
+                android:gravity="left"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="@string/pastride.textview_text_date"
+                android:textColor="@color/color_button_past_ride"
+                app:fontName="@string/font_regular" />
+
+            <com.driver.customclasses.CustomTextView
+                android:id="@+id/txtDate"
+                style="@style/Pastride_Textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@null"
+                android:gravity="left"
+                android:text=""
+                android:singleLine="true"
+                android:textColor="@color/color_button_past_ride"
+                app:fontName="@string/font_bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_marginLeft="@dimen/dp_5"
+
+                      android:layout_marginTop="@dimen/dp_5">
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:paddingBottom="@dimen/dp_28">
+                <ImageView android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/new_drop_icon"/>
+                <ImageView android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_horizontal"
+                           android:layout_marginTop="@dimen/dp_5"
+
+                           android:src="@drawable/new_location_line"/>
+                <ImageView android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/dp_4"
+                           android:src="@drawable/new_pickup_icon"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+
+                          android:orientation="vertical">
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/txtPickupAddress"
+                    style="@style/Pastride_Textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:singleLine="false"
+
+                    app:fontName="@string/font_regular"/>
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/txtDropoffAddress"
+                    style="@style/Pastride_Textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@null"
+
+                    android:ellipsize="end"
+                    android:singleLine="false"
+
+                    app:fontName="@string/font_regular"/>
+            </LinearLayout>
+        </LinearLayout>
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtDetail"
+            style="@style/Pastride_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@null"
+            android:ellipsize="end"
+            android:ems="5"
+            android:gravity="left"
+            android:singleLine="true"
+
+            app:fontName="@string/font_bold"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtAmount"
+            style="@style/Pastride_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/pastride_textcolor_amount"
+            android:textSize="@dimen/sp_16"
+            app:fontName="@string/font_bold"/>
+        <ImageView android:id="@+id/imgStatus"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginBottom="@dimen/dp_10"
+                   android:src="@drawable/new_drop_icon"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:clickable="true"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5">
+
+            <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/txtAboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@android:color/transparent"
+                ext:documentView_antialias="true"
+                ext:documentView_cacheConfig="auto_quality"
+                ext:documentView_insetPaddingBottom="@dimen/dp_5"
+                ext:documentView_insetPaddingLeft="@dimen/dp_5"
+                ext:documentView_insetPaddingRight="@dimen/dp_5"
+                ext:documentView_insetPaddingTop="@dimen/dp_5"
+                ext:documentView_text="@string/aboutus.lorem_ipsum"
+                ext:documentView_textAlignment="justified"
+                ext:documentView_textColor="@color/text_color_grey"
+                ext:documentView_textFormat="plain"
+                ext:documentView_textSize="@dimen/sp_16"
+                ext:documentView_textTypefacePath="@string/font_regular" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

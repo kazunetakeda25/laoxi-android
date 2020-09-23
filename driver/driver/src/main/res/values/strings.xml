@@ -1,0 +1,182 @@
+<resources>
+    <!--Developer map(Android key) key from hyperlinkcredential6@gmail.com account-->
+<!--    <string name="google_maps_key">AIzaSyAbD5G6X71vHkHsnRWJcbIyngHAlrQRQLk</string>-->
+
+    <!--Client's map(Android) key from daniel@hi-oscar.com.au-->
+    <string name="google_maps_key">AIzaSyAF69JEtuW0gGF8AAuw_JFwzHzZpM5Vd_8</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="ok_btn">OK</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="allow_permissions_from_settings">Allow permissions from settings</string>
+    <string name="email_address">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_your_password">Forgot Your
+        <b>Password?</b>
+    </string>
+    <string name="login">LOGIN</string>
+    <string name="signup">SIGN UP</string>
+    <string name="send">SEND</string>
+
+    <string name="font_regular">moderat_regular.ttf</string>
+    <string name="font_bold">moderat_bold.ttf</string>
+    <string name="register.first_name">First Name</string>
+    <string name="register.last_name">Last Name</string>
+    <string name="register.email_address">email address?</string>
+    <string name="or">or</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="create_password">Create Password</string>
+    <string name="support.name">Name</string>
+    <string name="support.email">Email Address</string>
+    <string name="support.message">Write your review about rider</string>
+    <string name="congratulations">Congratulations !</string>
+    <string name="you_have_successfully_registered_with_hi_oscar_please_confirm_your_email_address">
+        You have successfully registered with hi oscar, please confirm your email address
+    </string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+
+    <string name="aboutus.lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since
+        the 1500s\, when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book. It has survived not only five centuries\, but also the leap into electronic
+        typesetting\, remaining essentially unchanged. It was popularised in the 1960s with the
+        release of Letraset sheets containing Lorem Ipsum passages\, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.\nLorem Ipsum is
+        simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry\'s standard dummy text ever since the 1500s\, when an unknown printer took a galley
+        of type and scrambled it to make a type specimen book. It has survived not only five
+        centuries\, but also the leap into electronic typesetting\, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+        passages\, and more recently with desktop publishing software like Aldus PageMaker including
+        versions of Lorem Ipsum.\nLorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s\,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries\, but also the leap into electronic typesetting\,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of
+        Letraset sheets containing Lorem Ipsum passages\, and more recently with desktop publishing
+        software like Aldus PageMaker including versions of Lorem Ipsum.
+    </string>
+
+    <!--Feedback-->
+    <string name="feedback.textview_text_hi">hi</string>
+    <string name="feedback.textview_text_please_give_rating">Please give your rating</string>
+    <string name="feedback.textview_text_write_review_about_driver">Write your review about driver
+    </string>
+
+    <array name="Items">
+        <item>home</item>
+        <item>your rides</item>
+        <item>my account</item>
+        <item>about laoxi</item>
+        <item>support</item>
+    </array>
+
+    <!--Past Ride-->
+    <string name="pastride.textview_text_complete">Completed</string>
+    <string name="pastride.textview_text_canceled">Canceled</string>
+    <string name="pastride.textview_text_amount">$20.00</string>
+    <string name="pastride.textview_text_rideid">ID :</string>
+    <string name="pastride.textview_text_date">Date :
+    </string>
+    <string name="pastride.textview_text_Pickup">Warburton School Australia NLS Office. Harriet
+        Olney. PMB 72 Kalgoorlie 6430
+    </string>
+    <string name="pastride.textview_text_dropoff">Warburton WA 6431, Blackstone-Warburton Rd,
+        Australia
+    </string>
+    <string name="pastride.textview_text_Detail">Detail : Distance 10km, time 10min</string>
+    <string name="about_us">About us</string>
+    <string name="your_rides">your rides</string>
+    <string name="payment">Payment</string>
+    <string name="jump_in">Jump in!</string>
+    <string name="estimate_fare">Estimate Fare</string>
+    <string name="ride_later">Ride Later</string>
+
+    <string name="register.country_code">Country Code</string>
+    <string name="register.gender">Gender</string>
+    <string name="register.password">Password</string>
+    <string name="register.phone">Phone</string>
+    <string name="update">UPDATE MY ACCOUNT</string>
+    <string name="profile">Profile</string>
+
+    <!--Map-->
+    <string name="map.top_text_arrival_time">Arrival Time -</string>
+    <string name="map.top_value_arrival_time">10 min</string>
+    <string name="map.bottom_text_hi">hi</string>
+    <string name="map.bottom_text_i_am">I\'m</string>
+    <string name="map.bottom_text_car_model">Honda accord, 1u3001</string>
+
+
+    <!--Receipt-->
+    <string name="receipt.text_pickup_location">pick up location</string>
+    <string name="receipt.text_dropoff_location">drop off location</string>
+    <string name="receipt.text_distance_time">distance time</string>
+    <string name="receipt.text_distance_km">distance km</string>
+    <string name="receipt.text_driver_name">driver Name</string>
+    <string name="receipt.text_car_type">car type</string>
+    <string name="receipt.text_wanna_round_up">Wanna Round Up The Fare?</string>
+    <string name="receipt.text_total_cost">total cost</string>
+    <string name="receipt.text_card_detail">Card Detail</string>
+    <string name="receipt.text_update_payment_detail">Update Payment Detail</string>
+    <string name="receipt.button_text_ok">OK</string>
+
+    <string name="receipt.value_pickup_location">Abc, Shopping point australia, \n3000</string>
+    <string name="receipt.value_dropoff_location">moon complex, australia, \n3000</string>
+    <string name="receipt.value_distance_time">20 Min</string>
+    <string name="receipt.value_distance_km">15</string>
+    <string name="receipt.value_driver_name">John</string>
+    <string name="receipt.value_car_type">Honda Accord</string>
+    <string name="receipt.value_total_cost">$19.60</string>
+    <string name="receipt.value_cardholder_name">Alexandra Johns</string>
+    <string name="receipt.value_card_no_first">xxxx</string>
+    <string name="receipt.value_card_no_last">1234</string>
+
+
+    <string name="profile_updated_successfully">Profile updated successfully</string>
+    <string name="fullname">full name</string>
+    <string name="alertdialog_errror_message_location_enable">Please enable location</string>
+    <string name="please_select_country_code">Please select country code</string>
+    <string name="please_enter_email">Please enter email address</string>
+    <string name="please_enter_valid_email">Please enter valid email address</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="please_enter_first_name">Please enter first name</string>
+    <string name="please_enter_last_name">Please enter last name</string>
+    <string name="please_enter_phone_number">Please enter phone number</string>
+    <string name="please_enter_valid_phone">Please enter valid phone number</string>
+    <string name="password_should_be_minimum_6_characters">Password should be minimum 6 characters
+    </string>
+    <string name="bad_server">Bad Server Response</string>
+    <string name="login_with_facebook">Login With Facebook</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account?
+        <b>Sign Up.</b>
+    </string>
+    <string name="my_location">my location</string>
+    <string name="support_email_address">email address?</string>
+
+    <string name="dropOff">
+        <b>Dropoff:</b>
+        %s
+    </string>
+
+    <string name="pickup">
+        <b>Pickup:</b>
+        %s
+    </string>
+    <string name="bad_server_response">Bad Server Response</string>
+    <string name="i_m_alexender">i\'m </string>
+    <string name="can_t_wait_to_meet_you">Can\'t wait to meet you</string>
+    <string name="validation_please_say_something_aboutme">Please say something about me</string>
+    <string name="done">Done</string>
+    <string name="confirm_trip">Are you sure you want to accept a trip?</string>
+    <string name="already_accepted">This ride was accepted by other driver.</string>
+    <string name="rider_location">Rider location</string>
+    <string name="arrival_status">Arrived</string>
+
+
+</resources>

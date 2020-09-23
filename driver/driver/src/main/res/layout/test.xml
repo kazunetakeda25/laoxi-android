@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/drawer_back">
+
+        <LinearLayout
+            android:id="@+id/linear_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <com.github.siyamed.shapeimageview.ImageViewSlider
+                android:id="@+id/profileBG"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@drawable/profile"
+                app:siStrokeCap="round"
+                app:siStrokeJoin="round" />
+
+            <com.driver.customclasses.CustomTextView
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/hi_img_yello" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/tvDriverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:text="Alexandra"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/sp_20"
+                    app:fontName="@string/font_bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_alignBottom="@+id/textViewDriverName"
+                    android:layout_gravity="bottom"
+                    android:layout_toEndOf="@+id/textViewDriverName"
+                    android:src="@drawable/comma" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>

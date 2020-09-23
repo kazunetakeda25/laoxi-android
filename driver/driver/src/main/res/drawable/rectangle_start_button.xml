@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+        <corners android:radius="@dimen/dp_8"/>
+    <gradient
+        android:angle="-90"
+        android:endColor="@color/complete_button"
+        android:startColor="@color/complete_button" />
+
+    <size android:width="0dp"
+        android:height="@dimen/dp_35" />
+
+
+</shape>

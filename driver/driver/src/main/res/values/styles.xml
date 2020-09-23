@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background</item><!--rhc added-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="Pastride_Textview" parent="Base.Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/text_color_grey</item>
+        <item name="android:textColor">@color/new_text_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="EditTextStyle" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/text_color_grey</item>
+        <item name="android:textColor">@color/new_text_color</item>
+        <item name="android:padding">@dimen/dp_8</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+    <style name="EditTextInputStyle" >
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+</resources>

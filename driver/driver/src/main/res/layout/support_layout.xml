@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:clickable="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_15">
+
+        <ImageView
+            android:id="@+id/imgHi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:src="@drawable/hi_icon" />
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/tvHaveQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgHi"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:text="have a question?"
+            android:textColor="@color/color_button_blue"
+            android:textSize="@dimen/sp_30"
+            app:fontName="@string/font_bold" />
+        <!--
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tIName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHaveQuestion"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5">
+
+                    <com.laoxidriver.customclasses.CustomEditText
+                        android:id="@+id/editTextName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:hint="what's your name?"
+                        android:lines="1"
+                        app:fontName="@string/font_regular" />
+
+                </android.support.design.widget.TextInputLayout>-->
+
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHaveQuestion"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tIName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <com.driver.customclasses.CustomEditText
+                        android:id="@+id/editTextName"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:hint="what's your name?"
+                        android:inputType="text"
+                        android:textSize="@dimen/sp_20"
+                        app:fontName="@string/font_regular" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/or_line" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!--<android.support.design.widget.TextInputLayout
+            android:id="@+id/tIEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutName"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5">
+
+
+            <com.laoxidriver.customclasses.CustomEditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:hint="@string/support_email_address"
+                android:lines="1"
+                app:fontName="@string/font_regular" />
+
+        </android.support.design.widget.TextInputLayout>-->
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tIEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutName"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColorHint="@color/colorPrimary">
+
+            <com.driver.customclasses.CustomEditText
+                android:id="@+id/editTextEmailAddress"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:hint="@string/register.email_address"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/sp_20"
+                app:fontName="@string/font_regular" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tIEmail"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/or_line" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tIEmailMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tIEmail"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColorHint="@color/colorPrimary">
+
+
+            <com.driver.customclasses.CustomEditText
+                android:id="@+id/editTextEmailMessage"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="start"
+                android:hint="how can we help?"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLength="255"
+                android:textSize="@dimen/sp_20"
+                app:fontName="@string/font_regular" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tIEmailMessage"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/or_line" />
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:background="@drawable/rounded_corner_buttons_yellow"
+            android:gravity="center"
+            android:padding="@dimen/dp_15"
+            android:text="SEND"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            app:fontName="@string/font_regular" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

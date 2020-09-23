@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_250">
+
+
+        <LinearLayout
+            android:id="@+id/linear_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/msg_box"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <com.driver.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please select any one"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold"
+                app:fontName="@string/font_bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/text_color_blue"></View>
+
+            <com.driver.customclasses.CustomButton
+                android:id="@+id/btnWaze"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50" android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/waze"
+                android:textSize="@dimen/sp_14"
+                app:fontName="@string/font_bold" />
+
+            <com.driver.customclasses.CustomButton
+                android:id="@+id/btnGoogle"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:textSize="@dimen/sp_14" android:background="@drawable/google"
+                app:fontName="@string/font_bold" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/close_icon" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_5"
+            android:background="@drawable/msg_box"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.laoxidriver.customclasses.CustomEditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress"
+                android:lines="4"
+                android:textColor="@color/text_color_blue"
+                android:textColorHint="@color/text_color_blue"
+                android:textSize="@dimen/sp_14"
+                app:fontName="@string/font_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/text_color_blue"></View>
+
+            <com.laoxidriver.customclasses.CustomButton
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/rounded_corner_buttons_blue"
+                android:text="@string/send"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_14"
+                app:fontName="@string/font_regular" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    -->

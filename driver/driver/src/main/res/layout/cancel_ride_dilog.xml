@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner_buttons_white"
+        android:orientation="vertical">
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtRiderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:ems="@integer/ems_10"
+            android:paddingLeft="@dimen/dp_20"
+            android:text="Why cancel trip ?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_22"
+            app:fontName="@string/font_bold"/>
+
+
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <com.driver.customclasses.CustomRadioButton
+                android:id="@+id/cb1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:button="@null"
+                android:checked="true"
+                android:drawableRight="@drawable/radio_selector"
+                android:padding="@dimen/dp_10"
+                android:text="Passenger isn&apos;t here"
+                android:textColor="@color/past_future_ride_tab_unselected"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular"/>
+
+
+            <com.driver.customclasses.CustomRadioButton
+                android:id="@+id/cb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:button="@null"
+
+                android:drawableRight="@drawable/radio_selector"
+                android:padding="@dimen/dp_10"
+                android:text="Technical issues with car"
+                android:textColor="@color/past_future_ride_tab_unselected"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular"/>
+
+
+            <com.driver.customclasses.CustomRadioButton
+                android:id="@+id/cb3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:button="@null"
+
+                android:drawableRight="@drawable/radio_selector"
+                android:padding="@dimen/dp_10"
+                android:text="Wrong address shown"
+                android:textColor="@color/past_future_ride_tab_unselected"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular"/>
+
+
+            <com.driver.customclasses.CustomRadioButton
+                android:id="@+id/cb4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:button="@null"
+
+                android:drawableRight="@drawable/radio_selector"
+                android:padding="@dimen/dp_10"
+                android:text="Other"
+                android:textColor="@color/past_future_ride_tab_unselected"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular"/>
+
+        </RadioGroup>
+
+
+        <com.driver.customclasses.CustomEditText
+            android:id="@+id/edtReson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:hint="Write here..."
+            android:maxLines="4"
+
+            android:textColor="@color/past_future_ride_tab_unselected"
+            android:textColorHint="@color/past_future_ride_tab_unselected"
+            android:textSize="@dimen/sp_15"
+            android:visibility="gone"
+            app:fontName="@string/font_regular"
+        />
+
+        <com.driver.customclasses.CustomButton
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/rounded_corner_buttons_yellow"
+            android:text="@string/send"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp_18"
+            app:fontName="@string/font_bold"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

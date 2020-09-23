@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/receipt_bg"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_25"
+            android:paddingRight="@dimen/dp_25"
+            android:paddingTop="@dimen/dp_10">
+
+            <RelativeLayout
+                android:id="@+id/relativelayoutDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5">
+
+                <ImageView
+                    android:id="@+id/imageViewPickUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:src="@drawable/pickup_location_pin" />
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/textViewPickupLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_toEndOf="@+id/imageViewPickUp"
+                    android:text="@string/receipt.text_pickup_location"
+                    android:textColor="@color/new_text_color"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold"
+                    app:fontName="@string/font_bold" />
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/txtPickupAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textViewPickupLable"
+                    android:layout_below="@+id/textViewPickupLable"
+                    android:textColor="@color/new_text_color"
+                    android:textSize="@dimen/sp_13"
+                    app:fontName="@string/font_regular" />
+
+                <ImageView
+                    android:id="@+id/imageviewLocationLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewPickUp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/location_line" />
+
+                <ImageView
+                    android:id="@+id/imageViewDropOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_below="@+id/imageviewLocationLine"
+                    android:src="@drawable/drop_location_pin" />
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/textViewDropOffLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txtPickupAddress"
+                    android:layout_below="@+id/imageviewLocationLine"
+                    android:text="@string/receipt.text_dropoff_location"
+                    android:textColor="@color/new_text_color"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold"
+                    app:fontName="@string/font_bold" />
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/txtDropoffAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txtPickupAddress"
+                    android:layout_below="@+id/textViewDropOffLable"
+                    android:textColor="@color/new_text_color"
+                    android:textSize="@dimen/sp_13"
+                    app:fontName="@string/font_regular" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/doted_box"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <com.driver.customclasses.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center_horizontal"
+                        android:lines="1"
+                        android:padding="@dimen/dp_2"
+                        android:text="@string/receipt.text_distance_time"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_14"
+                        app:fontName="@string/font_regular" />
+
+                    <com.driver.customclasses.CustomTextView
+                        android:id="@+id/txtDistanceTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:lines="1"
+                        android:padding="@dimen/dp_2"
+
+                        android:textColor="@color/new_text_color"
+                        android:textSize="@dimen/sp_14"
+                        app:fontName="@string/font_regular" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/saperate_line"
+                    android:layerType="software" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <com.driver.customclasses.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/dp_2"
+                        android:singleLine="false"
+                        android:text="@string/receipt.text_distance_km"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_14"
+                        app:fontName="@string/font_regular" />
+
+                    <com.driver.customclasses.CustomTextView
+                        android:id="@+id/txtDistanceKm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:lines="1"
+                        android:padding="@dimen/dp_2"
+
+                        android:textColor="@color/new_text_color"
+                        android:textSize="@dimen/sp_14"
+                        app:fontName="@string/font_regular" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/doted_box"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <com.driver.customclasses.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center_horizontal"
+                        android:lines="1"
+                        android:padding="@dimen/dp_2"
+                        android:text="rider name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_14"
+                        app:fontName="@string/font_regular" />
+
+                    <com.driver.customclasses.CustomTextView
+                        android:id="@+id/txtDriverName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:lines="1"
+                        android:padding="@dimen/dp_2"
+
+                        android:textColor="@color/new_text_color"
+                        android:textSize="@dimen/sp_14"
+                        app:fontName="@string/font_regular" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/doted_box"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/txtHeaderTotalCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="center_horizontal"
+                    android:lines="1"
+                    android:text="@string/receipt.text_total_cost"
+                    android:textColor="@color/new_text_color"
+                    android:textSize="@dimen/sp_14"
+                    app:fontName="@string/font_regular" />
+
+                <com.driver.customclasses.CustomTextView
+                    android:id="@+id/txtTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txtHeaderTotalCost"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_toEndOf="@id/txtHeaderTotalCost"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:lines="1"
+
+                    android:textColor="@color/text_amount_color_blue"
+                    android:textSize="@dimen/sp_24"
+                    app:fontName="@string/font_bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/doted_box"
+                android:layerType="software" />
+
+
+            <com.driver.customclasses.CustomButton
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@drawable/rounded_corner_buttons_yellow"
+                android:padding="@dimen/dp_15"
+                android:text="@string/ok_btn"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:fontName="@string/font_bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

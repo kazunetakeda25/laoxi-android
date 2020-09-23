@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_5"
+    android:paddingLeft="@dimen/dp_5"
+    android:paddingRight="@dimen/dp_5"
+    android:paddingTop="@dimen/dp_5">
+
+    <LinearLayout
+        android:id="@+id/layoutRideDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtRideId"
+            style="@style/Pastride_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/pastride.textview_text_rideid"
+            android:textColor="@color/pastride_textcolor_amount"
+            app:fontName="@string/font_regular" />
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtDate"
+            style="@style/Pastride_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/pastride.textview_text_date"
+            app:fontName="@string/font_regular" />
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtPickupAddress"
+            style="@style/Pastride_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+
+            app:fontName="@string/font_regular" />
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/txtDropoffAddress"
+            style="@style/Pastride_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+
+            app:fontName="@string/font_regular" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineWriteReview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/layoutRideDetail"
+        android:background="@drawable/or_line"
+        android:layout_marginTop="@dimen/dp_5" />
+
+</RelativeLayout>

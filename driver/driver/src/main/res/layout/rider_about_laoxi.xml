@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.driver.customclasses.CustomTextView
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/dp_35"
+            android:text="Title Text"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp_20"
+            app:fontName="@string/font_bold" />
+
+        <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view3"
+            android:layout_centerInParent="true"
+            android:fillViewport="true"
+            android:gravity="center"
+            android:scrollbars="none">
+
+            <com.driver.customclasses.CustomTextView
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_12"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_16"
+                app:fontName="@string/font_regular" />
+        </ScrollView>
+
+
+    </RelativeLayout>
+</LinearLayout>
