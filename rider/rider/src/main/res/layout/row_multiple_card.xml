@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+
+                android:background="@drawable/rounded_corner_buttons_grey"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.rider.customclasses.CustomTextView
+        android:id="@+id/tvMyCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/card_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center"
+        android:text="My Card"
+        android:textColor="@color/track_me_eta_color"
+        app:fontName="@string/font_bold" />
+
+    <com.rider.customclasses.CustomTextView
+        android:id="@+id/tvCardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/imagViewDelete"
+        android:drawablePadding="@dimen/dp_10"
+        android:text="xxxx-xxxx-xxxx-0000"
+        android:textColor="@color/track_me_eta_color"
+        app:fontName="@string/font_bold"/>
+
+    <ImageView
+        android:id="@+id/imagViewDelete"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_5"
+        android:layout_width="@dimen/dp_20"
+        android:src="@drawable/close_icon"
+        android:layout_height="@dimen/dp_20" />
+
+</RelativeLayout>

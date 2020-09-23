@@ -1,0 +1,83 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/White"
+             android:clickable="true"
+             tools:context="com.rider.fragments.RedeemCodeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10">
+
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_30"
+                android:paddingRight="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_15"
+                android:text="Promo code"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dp_18"
+                app:fontName="@string/font_regular" />
+
+
+            <com.rider.customclasses.CustomEditText
+                android:id="@+id/edtPromoCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingLeft="@dimen/dp_30"
+                android:paddingRight="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_10"
+                android:textColorHint="@color/new_text_color"
+                android:hint="code"
+                android:textColor="@color/new_text_color"
+                android:textSize="@dimen/dp_20"
+                app:fontName="@string/font_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@android:color/darker_gray" />
+
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/txtSubmitCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/rounded_corner_buttons_yellow"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_20"
+                android:text="Submit promo code"
+                android:textAllCaps="true"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

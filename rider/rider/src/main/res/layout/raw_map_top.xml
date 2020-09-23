@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White" android:visibility="invisible"
+    android:elevation="@dimen/dp_6"
+    android:gravity="center" android:id="@+id/linear_main_time"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <com.rider.customclasses.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_horizontal"
+        android:lines="1"
+        android:text="@string/map.top_text_arrival_time"
+        android:textColor="@color/track_me_eta_color"
+        android:textSize="@dimen/sp_16"
+        app:fontName="@string/font_regular" />
+
+    <com.rider.customclasses.CustomTextView
+        android:id="@+id/txtArrivalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_5"
+        android:background="@null"
+        android:lines="1"
+        android:text="@string/map.top_value_arrival_time"
+        android:textColor="@color/track_me_eta_color"
+        android:textSize="@dimen/sp_20"
+        app:fontName="@string/font_bold" />
+
+    <com.rider.customclasses.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_horizontal"
+        android:lines="1"
+        android:text="away!"
+        android:textColor="@color/track_me_eta_color"
+        android:textSize="@dimen/sp_16"
+        app:fontName="@string/font_regular" />
+
+
+</LinearLayout>

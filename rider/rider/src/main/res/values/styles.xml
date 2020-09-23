@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EditTextStyle" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/new_text_color</item>
+        <item name="android:padding">@dimen/dp_8</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+    <style name="EditTextStyleGrey" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/new_text_color</item>
+        <item name="android:textColor">@color/new_text_color</item>
+        <item name="android:padding">@dimen/dp_8</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+
+    <style name="Pastride_Textview" parent="Base.Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/new_text_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="EditTextOtp">
+        <item name="android:layout_width">@dimen/dp_50</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:layout_marginRight">@dimen/dp_5</item>
+
+        <item name="android:paddingTop">@dimen/dp_13</item>
+        <item name="android:paddingBottom">@dimen/dp_13</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/new_text_color</item>
+
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:background">@drawable/purpul_button_backgrond</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+</resources>

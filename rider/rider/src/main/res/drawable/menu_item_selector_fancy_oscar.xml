@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/tuktuk_sel"
+        android:state_selected="true"
+        />
+    <item android:drawable="@drawable/tuktuk_sel" android:state_checked="true" />
+
+    <item>
+        <bitmap android:src="@drawable/tuktuk" android:gravity="center" />
+    </item>
+</selector>

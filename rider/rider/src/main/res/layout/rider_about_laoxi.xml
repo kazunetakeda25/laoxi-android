@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/dp_20"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/view3"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/dp_35"
+            android:text="We're fair"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp_20"
+            app:fontName="@string/font_bold" />
+
+        <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view3"
+            android:layout_centerInParent="true"
+            android:fillViewport="true"
+            android:gravity="center"
+            android:scrollbars="none">
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_12"
+               android:text=" We live in the land of the Fair Go,\n and believe everyone should be \n treated fairly and ethically. So, we've \n eliminated surge pricing (as we're \n always happy to have you on board!)."
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_16"
+                app:fontName="@string/font_regular" />
+        </ScrollView>
+
+
+    </RelativeLayout>
+</LinearLayout>

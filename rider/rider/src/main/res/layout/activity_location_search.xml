@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:textDirection="inherit">
+
+
+    <LinearLayout
+        android:elevation="@dimen/dp_1"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/rounded_corner_buttons_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.rider.customclasses.CustomEditText
+            android:id="@+id/edEnterLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:drawablePadding="@dimen/dp_20"
+            android:gravity="start|center"
+            android:hint="Search locations"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_5"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Ash_Gray"
+            android:textSize="@dimen/abc_text_size_medium_material">
+
+            <requestFocus />
+        </com.rider.customclasses.CustomEditText>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressbarSearch"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+
+        <ListView
+
+            android:visibility="invisible"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:elevation="@dimen/dp_1"
+            android:background="@drawable/rounded_corner_buttons_white"
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+
+        <com.rider.customclasses.CustomTextView
+            android:layout_margin="@dimen/dp_10"
+            android:elevation="@dimen/dp_1"
+            android:background="@drawable/rounded_corner_buttons_white"
+            android:visibility="gone"
+            android:id="@+id/textviewSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:backgroundTint="#00000000"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:drawablePadding="@dimen/dp_20"
+            android:gravity="start|center"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_5"
+            android:text="You search for"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Ash_Gray">
+
+
+        </com.rider.customclasses.CustomTextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/powered_by_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        />
+
+</LinearLayout>

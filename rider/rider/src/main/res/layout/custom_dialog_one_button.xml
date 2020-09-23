@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_5"
+        android:background="@drawable/msg_box"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/congratulations"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/sp_25"
+            app:fontName="@string/font_regular" />
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:lines="4"
+            android:padding="@dimen/dp_10"
+            android:text="@string/you_have_successfully_registered_with_laoxi_please_confirm_your_email_address"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/sp_16"
+            app:fontName="@string/font_regular" />
+
+        <com.rider.customclasses.CustomButton
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/rounded_corner_buttons_blue"
+            android:text="@string/ok_btn"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp_16"
+            app:fontName="@string/font_bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

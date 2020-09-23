@@ -1,0 +1,243 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_100"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:src="@drawable/logo_login"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tIEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5">
+
+
+                    <com.rider.customclasses.CustomEditText
+                        android:id="@+id/edtEmail"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:hint="@string/email_address"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/new_text_color"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/sp_15"
+                        app:fontName="@string/font_regular"></com.rider.customclasses.CustomEditText>
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/line_login" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tIPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5">
+
+                    <com.rider.customclasses.CustomEditText
+                        android:id="@+id/edtPassword"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:hint="@string/password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/new_text_color"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/sp_15"
+                        app:fontName="@string/font_regular"></com.rider.customclasses.CustomEditText>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <CheckBox
+                    android:checked="false"
+                    android:id="@+id/remember"
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:background="@drawable/remeber_me_selector"
+                    android:button="@null" />
+
+                <com.rider.customclasses.CustomTextView
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:id="@+id/txtTems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="Remember me"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/sp_18"
+                    app:fontName="@string/font_regular" />
+
+
+            </LinearLayout>
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/textForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/dp_5"
+                android:padding="@dimen/dp_10"
+                android:text="@string/forgot_your_password"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_14"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomButton
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/login_btn"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_2"
+                android:text="@string/login"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_16"
+                app:fontName="@string/font_bold" />
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_5"
+                android:padding="@dimen/dp_10"
+                android:text="@string/login_with"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_18"
+                app:fontName="@string/font_bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <com.rider.customclasses.CustomButton
+                    android:id="@+id/btnSignupFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/facebook_btn"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp_2"
+                    android:text="@string/login_with_facebook"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/sp_16"
+                    app:fontName="@string/font_bold" />
+
+                <com.rider.customclasses.CustomButton
+                    android:id="@+id/btnSigninGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:background="@drawable/google_btn"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/login_with_google"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/sp_16"
+                    app:fontName="@string/font_bold" />
+            </LinearLayout>
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/textVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_30"
+                android:padding="@dimen/dp_10"
+                android:text="v1.5(60)"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_16"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.rider.customclasses.CustomTextView
+        android:id="@+id/textDontHave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_up_bg_in_login"
+        android:gravity="center"
+        android:text="@string/don_t_have_an_account_sign_up"
+        android:textColor="@color/White"
+        android:textSize="@dimen/sp_16"
+        app:fontName="@string/font_regular" />
+
+
+</LinearLayout>

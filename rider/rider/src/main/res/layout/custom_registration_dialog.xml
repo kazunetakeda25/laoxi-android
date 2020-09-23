@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_5"
+        android:background="@drawable/register_msg_bg"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" android:paddingBottom="@dimen/dp_5"
+            android:gravity="center"
+            android:lines="4"
+            android:text="@string/you_have_successfully_registered_with_laoxi_please_confirm_your_email_address"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp_16"
+            app:fontName="@string/font_regular" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" android:layout_margin="@dimen/dp_5"
+        android:background="@drawable/msg_box"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:lines="4"
+            android:text="You have successfully registered with laoxi, please confirm your email address"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/sp_14"
+            app:fontName="@string/font_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent" android:gravity="center"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.rider.customclasses.CustomButton
+                android:id="@+id/btnOk"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_buttons_blue"
+                android:text="@string/yes"
+                android:textColor="@color/White"
+                app:fontName="@string/font_bold" />
+
+
+            <com.rider.customclasses.CustomButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_buttons_yellow"
+                android:text="@string/no"
+                android:textColor="@color/White"
+                app:fontName="@string/font_bold" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

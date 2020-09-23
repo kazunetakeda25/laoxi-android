@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_toRightOf="@+id/imglocations"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            app:fontName="@string/font_regular" />
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/txtArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/Gray"
+            app:fontName="@string/font_regular" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imglocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:src="@android:drawable/ic_menu_myplaces" />
+
+
+</RelativeLayout>

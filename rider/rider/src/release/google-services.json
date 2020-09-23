@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "236268501145",
+    "firebase_url": "https://laoxi-1acab.firebaseio.com",
+    "project_id": "laoxi-1acab",
+    "storage_bucket": "laoxi-1acab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236268501145:android:716bfe277be6f58c",
+        "android_client_info": {
+          "package_name": "com.yrh.app.laoxi.rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236268501145-mmj47jqt7mtc4g4dp34bubpu0kivjt45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAIAGpc1knUrP-LWFARFKF3uEpTOdFWI4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

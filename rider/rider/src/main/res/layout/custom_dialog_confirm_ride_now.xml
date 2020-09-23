@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_250">
+
+
+        <LinearLayout
+            android:id="@+id/linear_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_20"
+            android:background="@drawable/msg_box"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <com.rider.customclasses.CustomTextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="I'm ready"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold"
+                app:fontName="@string/font_bold" />
+
+            <com.rider.customclasses.CustomButton
+                android:textSize="@dimen/sp_12"
+                android:layout_marginTop="@dimen/dp_20"
+                    android:id="@+id/txtEstimateFare"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@drawable/driver_details_estimate_fare_drawable"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="$ ESTIMATE FARE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/White"
+                    app:fontName="@string/font_bold" />
+
+
+            <LinearLayout
+
+                android:id="@+id/linearLayoutRideNow"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:background="@drawable/driver_details_bottom_drawable"
+                android:layout_height="wrap_content">
+
+                <com.rider.customclasses.CustomButton
+                    android:textSize="@dimen/sp_12"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="Ride Now"
+                    android:textAllCaps="true"
+                    android:textColor="@color/White"
+                    app:fontName="@string/font_bold" />
+
+                <ImageView
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/thumbs_up_home"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <com.rider.customclasses.CustomButton
+                android:textSize="@dimen/sp_12"
+                android:id="@+id/txtRideLater"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/ride_later_drawable"
+                android:gravity="center"
+                android:text="RIDE LATER"
+                android:textColor="@color/White"
+                app:fontName="@string/font_bold"/>
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/close" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

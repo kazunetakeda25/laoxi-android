@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:id="@+id/linearmain"
+    android:orientation="vertical">
+
+    <include  android:id="@+id/header"
+        layout="@layout/top_bar_back" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+        android:layoutDirection="ltr"
+        android:layout_marginTop="@dimen/dp_50"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <com.rider.customclasses.CustomEditText
+            android:id="@+id/editTextOtpFirst"
+            style="@style/EditTextOtp"
+            android:imeOptions="actionNext"
+            app:fontName="@string/font_regular" />
+
+        <com.rider.customclasses.CustomEditText
+            android:id="@+id/editTextOtpSecond"
+            style="@style/EditTextOtp"
+            android:imeOptions="actionNext"
+            app:fontName="@string/font_regular" />
+
+        <com.rider.customclasses.CustomEditText
+            android:id="@+id/editTextOtpThird"
+            style="@style/EditTextOtp"
+            android:imeOptions="actionNext"
+            app:fontName="@string/font_regular" />
+
+        <com.rider.customclasses.CustomEditText
+            android:id="@+id/editTextOtpFourth"
+            style="@style/EditTextOtp"
+            android:imeOptions="actionDone"
+            app:fontName="@string/font_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_height="wrap_content">
+        <com.rider.customclasses.CustomTextView
+            android:layout_width="wrap_content"
+            android:text="@string/otp_layout.textview.text.dontreceive"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            app:fontName="@string/font_regular"/>
+
+        <com.rider.customclasses.CustomTextView
+            android:layout_width="wrap_content"
+            android:text="@string/otp_layout.textview.text.resendotp"
+            android:id="@+id/textViewResendOtp"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:textColor="@color/color_button_yellow"
+            android:layout_height="wrap_content"
+            app:fontName="@string/font_bold"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60" />
+
+
+    <com.rider.customclasses.CustomButton
+        android:id="@+id/btn_editProfile"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="@dimen/dp_45"
+        android:layout_marginStart="@dimen/dp_45"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_btn"
+        android:text="SUBMIT"
+        android:textColor="@color/White"
+        app:fontName="@string/font_bold" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

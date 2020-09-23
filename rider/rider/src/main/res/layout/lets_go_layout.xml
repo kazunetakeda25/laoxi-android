@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativemain"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50">
+
+            <!--android:src="@drawable/back"-->
+
+            <ImageView
+                android:id="@+id/header_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="left"
+                android:paddingBottom="@dimen/dp_20"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_20"
+                android:src="@drawable/menu_icon"
+                android:visibility="gone" />
+            <!--android:src="@drawable/menu"-->
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/header_text"
+                android:layout_width="@dimen/dp_250"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:maxLines="1"
+                android:text="so, where to?"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_22"
+                app:fontName="@string/font_bold" />
+
+            <!--  <ImageView
+                  android:id="@+id/img_share"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_gravity="left"
+                  android:paddingBottom="@dimen/dp_20"
+                  android:paddingLeft="@dimen/dp_20"
+                  android:paddingRight="@dimen/dp_20"
+                  android:paddingTop="@dimen/dp_20"
+                  android:src="@drawable/share_icon"
+                  android:visibility="visible" />-->
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.rider.customclasses.CustomEditText
+                android:id="@+id/edtPickupFrom"
+                style="@style/EditTextStyleGrey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:background="@color/White"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableRight="@drawable/right_sign"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center_vertical"
+                android:hint="pick me up from..."
+                android:inputType="text"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomEditText
+                android:id="@+id/edtDropOff"
+                style="@style/EditTextStyleGrey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@color/White"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableRight="@drawable/search_icon"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center_vertical"
+                android:hint="Take me to.."
+                android:inputType="text"
+                app:fontName="@string/font_regular" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutDriverDetail"
+        android:layout_below="@+id/linear_main"
+        android:clickable="false">
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            map:cameraBearing="112.5"
+            map:cameraTargetLat="-26.531085"
+            map:cameraTargetLng="131.843581"
+            map:cameraTilt="00"
+            map:cameraZoom="6"
+            android:layout_height="match_parent" />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/locationMarker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_current_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:src="@drawable/current_location_icon" />
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/txtRideLater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/img_current_location"
+                android:background="@drawable/ride_later_btn"
+                android:ems="10"
+                android:gravity="center"
+                android:text="RIDE LATER"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_14"
+                app:fontName="@string/font_regular" />
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/layoutDriverDetail"
+        layout="@layout/raw_driver_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

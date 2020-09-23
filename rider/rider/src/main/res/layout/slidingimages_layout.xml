@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageaa"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/screen_1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/LnProfilePgoto"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dp_130"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Youre Profile Photo"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_22"
+                app:fontName="@string/font_bold" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We want you to look your best so we"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                android:layout_marginTop="@dimen/dp_8"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have listed a few key considerations!"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find thet best lighting"
+                android:drawablePadding="@dimen/dp_8"
+                android:textColor="@color/White"
+                android:drawableLeft="@drawable/dot"
+                android:textSize="@dimen/sp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be yourself"
+                android:drawablePadding="@dimen/dp_8"
+                android:textColor="@color/White"
+                android:drawableLeft="@drawable/dot"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="consider your background"
+                android:drawablePadding="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColor="@color/White"
+                android:drawableLeft="@drawable/dot"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smile"
+                android:drawablePadding="@dimen/dp_8"
+                android:textColor="@color/White"
+                android:layout_marginTop="@dimen/dp_5"
+                android:drawableLeft="@drawable/dot"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/LnVehiclePgoto"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dp_110"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Youre Vehicle Photo"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_22"
+                app:fontName="@string/font_bold" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We want your car to look just as"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                android:layout_marginTop="@dimen/dp_8"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="good! So try these out:"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consider the time of the day"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be on the lookout for reflections"
+                android:textColor="@color/White"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consider the background"
+                android:textColor="@color/White"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="Must be a clean car"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try an interesting angle to stand out!"
+                android:textColor="@color/White"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textSize="@dimen/sp_15"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+</FrameLayout>

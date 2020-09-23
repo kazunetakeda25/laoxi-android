@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:radius="1dp"
+        android:topLeftRadius="@dimen/dp_8"
+        android:topRightRadius="@dimen/dp_8" />
+
+    <solid android:color="@color/color_button_past_row_back"></solid>
+
+
+</shape>

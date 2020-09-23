@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:padding="@dimen/dp_10"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/driver_details_like_background_drawable"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_centerVertical="true">
+
+
+        <RelativeLayout
+            android:id="@+id/frame_driver"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/txtDislikes"
+                android:layout_width="@dimen/dp_130"
+                android:layout_height="@dimen/dp_130"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_85"
+                android:layout_marginTop="@dimen/dp_140"
+                android:background="@drawable/dislike_icon"
+                android:gravity="bottom|center"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_4"
+                android:textColor="@color/White"
+                app:fontName="@string/font_bold" />
+
+            <com.rider.customclasses.CustomTextView
+
+                android:id="@+id/txtLikes"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="@dimen/dp_180"
+                android:layout_marginRight="@dimen/dp_25"
+                android:background="@drawable/like_icon"
+                android:gravity="bottom|center"
+                android:paddingBottom="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:textColor="@color/White"
+                app:fontName="@string/font_bold" />
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/close_icon" />
+
+
+</RelativeLayout>

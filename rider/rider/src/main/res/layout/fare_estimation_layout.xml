@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--android:src="@drawable/back"-->
+
+            <ImageView
+                android:id="@+id/header_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="left"
+                android:paddingBottom="@dimen/dp_20"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_20"
+                android:src="@drawable/back_arrow"
+                android:visibility="visible" />
+            <!--android:src="@drawable/menu"-->
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/header_text"
+                android:layout_width="@dimen/dp_250"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:maxLines="1"
+                android:text="Register"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_22" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayoutBottom"
+        android:layout_marginTop="@dimen/dp_30"
+        android:clickable="false">
+
+
+        <FrameLayout
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayoutToolbar"
+            android:layout_marginTop="@dimen/dp_50">
+
+        </FrameLayout>
+
+
+        <!--   <com.laoxi.customclasses.CustomTextView
+               android:id="@+id/txtDropOff"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_50"
+               android:layout_alignParentTop="true"
+               android:layout_centerHorizontal="true"
+               android:layout_marginLeft="@dimen/dp_15"
+               android:layout_marginRight="@dimen/dp_15"
+               android:layout_marginTop="@dimen/dp_28"
+               android:background="@drawable/rounded_corner_buttons_white"
+               android:focusable="false"
+               android:gravity="center"
+               android:hint="Drop off"
+               android:paddingBottom="@dimen/dp_10"
+               android:paddingLeft="@dimen/dp_10"
+               android:paddingRight="@dimen/dp_10"
+               android:textColorHint="@color/color_button_yellow"
+               android:textSize="@dimen/sp_14"
+               app:fontName="@string/font_bold" />-->
+
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/txtDropOff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/rounded_corner_buttons_white"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="Drop off"
+            android:lines="1"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColorHint="@color/color_button_yellow"
+            android:textSize="@dimen/sp_14"
+            app:fontName="@string/font_bold" />
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/White">
+
+        <RelativeLayout
+            android:id="@+id/relativelayoutDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15">
+
+            <ImageView
+                android:id="@+id/imageViewPickUp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:src="@drawable/pickup_icon" />
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/textViewPickupLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_toEndOf="@+id/imageViewPickUp"
+                android:text="Pick up Location"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/txtPickupValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textViewPickupLable"
+                android:layout_below="@+id/textViewPickupLable"
+                android:textSize="@dimen/sp_11"
+                app:fontName="@string/font_regular" />
+
+
+            <ImageView
+                android:id="@+id/imageviewLocationLine"
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="@dimen/dp_40"
+                android:layout_below="@+id/imageViewPickUp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/location_line" />
+
+
+            <ImageView
+                android:id="@+id/imageViewDropOff"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/imageviewLocationLine"
+                android:src="@drawable/dropof_icon" />
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/textViewDropOffLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtPickupValue"
+                android:layout_below="@+id/imageviewLocationLine"
+                android:text="Drop off Location"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold"
+                app:fontName="@string/font_regular" />
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/txtDropOffValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtPickupValue"
+                android:layout_below="@+id/textViewDropOffLable"
+                android:textSize="@dimen/sp_11"
+                app:fontName="@string/font_regular" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageViewLineTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_below="@+id/relativelayoutDetails"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_12"
+            android:src="@drawable/horizontal_line_layout" />
+
+        <LinearLayout
+            android:id="@+id/lineLyoutFareDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewLineTop"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.rider.customclasses.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Approx Km"
+                    app:fontName="@string/font_regular" />
+
+                <com.rider.customclasses.CustomTextView
+                    android:id="@+id/txtApproxKm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="7"
+                    app:fontName="@string/font_regular" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/saperate_line_fare_estimation" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.rider.customclasses.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ETA"
+                    app:fontName="@string/font_regular" />
+
+                <com.rider.customclasses.CustomTextView
+                    android:id="@+id/txtEta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="10 Min"
+                    app:fontName="@string/font_regular" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/saperate_line_fare_estimation" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.rider.customclasses.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car Type"
+                    app:fontName="@string/font_regular" />
+
+                <com.rider.customclasses.CustomTextView
+                    android:id="@+id/txtCarModel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="Honda Accord"
+                    app:fontName="@string/font_regular" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageViewLineBottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_below="@+id/lineLyoutFareDetail"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_12"
+            android:src="@drawable/horizontal_line_layout" />
+
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/textViewEstimatedCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewLineBottom"
+            android:layout_centerHorizontal="true"
+            android:text="Estimated Cost"
+            android:textColor="@color/text_color_grey"
+            app:fontName="@string/font_regular" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutEstCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewEstimatedCost"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/txtMinFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 15.00 "
+                android:textColor="@color/color_button_blue"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:fontName="@string/font_regular" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:src="@drawable/est_cost_line" />
+
+
+            <com.rider.customclasses.CustomTextView
+                android:id="@+id/txtMaxFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 20.00 "
+                android:textColor="@color/color_button_blue"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+
+
+        <com.rider.customclasses.CustomTextView
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutEstCost"
+            android:background="@color/color_button_yellow"
+            android:gravity="center"
+            android:padding="@dimen/dp_12"
+            android:text="OK"
+            android:textColor="@color/text_color_grey"
+            app:fontName="@string/font_regular" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
