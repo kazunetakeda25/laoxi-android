@@ -1,0 +1,171 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    jcenter()
+    google()
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.riderPackageName
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        resValue 'string', 'MAINURL', "\"${rootProject.ext.testServer}/api/v2/\""
+        resValue 'string', 'MAINURL_FOR_IMAGE', "\"${rootProject.ext.testServer}/assets/uploads/user/\""
+        resValue 'string', 'URL_FOR_USER_THUMB_IMAGE', "\"${rootProject.ext.testServer}/assets/uploads/user/\""
+        resValue 'string', 'MAINURL_FOR_DRIVER_IMAGE', "\"${rootProject.ext.testServer}/assets/uploads/driver/\""
+        resValue 'string', 'MAINURL_FOR_DRIVER_CAR', "\"${rootProject.ext.testServer}/assets/uploads/car_type_image/\""
+        resValue 'string', 'MAIN_URL_TWILIO', "\"${rootProject.ext.testServer}/twilio/token.php\""
+
+        resValue "string", "app_name", "${rootProject.ext.riderAppName}"
+
+        manifestPlaceholders = [
+                appIcon: '@mipmap/ic_launcher_internaltest'
+        ]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    signingConfigs {
+        product {
+            storeFile rootProject.ext.prodKeyStore
+            storePassword rootProject.ext.prodKeyName
+            keyAlias rootProject.ext.prodKeyName
+            keyPassword rootProject.ext.prodKeyName
+        }
+        develop {
+            storeFile rootProject.ext.testKeyStore
+            storePassword rootProject.ext.testKeyName
+            keyAlias rootProject.ext.testKeyName
+            keyPassword rootProject.ext.testKeyName
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.develop
+            applicationIdSuffix ".test"
+            buildConfigField "String", "BASE_URL", "\"${rootProject.ext.testServer}\""
+        }
+
+        release {
+            signingConfig signingConfigs.product
+
+            buildConfigField "String", "BASE_URL", "\"${rootProject.ext.prodServer}\""
+            resValue 'string', 'MAINURL', "\"${rootProject.ext.prodServer}/api/v2/\""
+            resValue 'string', 'MAINURL_FOR_IMAGE', "\"${rootProject.ext.prodServer}/assets/uploads/user/\""
+            resValue 'string', 'URL_FOR_USER_THUMB_IMAGE', "\"${rootProject.ext.prodServer}/assets/uploads/user/\""
+            resValue 'string', 'MAINURL_FOR_DRIVER_IMAGE', "\"${rootProject.ext.prodServer}/assets/uploads/driver/\""
+            resValue 'string', 'MAINURL_FOR_DRIVER_CAR', "\"${rootProject.ext.prodServer}/assets/uploads/car_type_image/\""
+            resValue 'string', 'MAIN_URL_TWILIO', "\"${rootProject.ext.prodServer}/twilio/token.php\""
+
+            resValue "string", "app_name", rootProject.ext.riderAppName
+
+            manifestPlaceholders = [
+                    appIcon: '@mipmap/ic_launcher'
+            ]
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = outputFile.name.replace("app-release",
+                                "${rootProject.ext.riderAppName}-${variant.versionName}")
+                        outputFileName = fileName
+
+                    }
+
+                }
+            }
+        }
+
+    }
+    useLibrary 'org.apache.http.legacy'
+    repositories {
+        mavenCentral()
+    }
+    productFlavors {
+    }
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+        }
+    }
+    dexOptions {
+        jumboMode = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':library')
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportLibVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.ext.supportLibVersion"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation project(':library')
+    implementation(project(':ViewPagerIndicator-Library')) {
+        exclude module: 'support-v4'
+    }
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.github.bluejamesbond:textjustify-android:2.1.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation('com.squareup.retrofit2:retrofit:2.3.0') {
+        exclude module: 'okhttp'
+    }
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'com.facebook.android:facebook-android-sdk:4.1.0'
+    implementation 'com.wdullaer:materialdatetimepicker:2.2.0'
+    implementation 'com.twilio:client-android:1.2.21'
+    implementation 'com.koushikdutta.ion:ion:2.2.1'
+    implementation "com.android.support:support-v4:$rootProject.ext.supportLibVersion"
+    implementation 'io.michaelrocks:libphonenumber-android:8.1.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.4.4'
+    implementation "com.android.support:support-compat:$rootProject.ext.supportLibVersion"
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.robolectric:robolectric:3.8'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+apply plugin: 'com.google.gms.google-services'

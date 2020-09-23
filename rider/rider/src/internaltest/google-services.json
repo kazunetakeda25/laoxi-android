@@ -1,0 +1,129 @@
+{
+  "project_info": {
+    "project_number": "262072346397",
+    "firebase_url": "https://laoxi-test.firebaseio.com",
+    "project_id": "laoxi-test",
+    "storage_bucket": "laoxi-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262072346397:android:02e37caff0259084",
+        "android_client_info": {
+          "package_name": "com.yrh.app.laoxi.driver.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262072346397-qi2h44nkaiell4d3roer1a7lm8ji2dvj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yrh.app.laoxi.driver.test",
+            "certificate_hash": "4efe6eba9ab1a56204d1b23875cae1655cca2dcf"
+          }
+        },
+        {
+          "client_id": "262072346397-qu6p4glqi1f8qu9nbrm40rn9q5eqtma0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yrh.app.laoxi.driver.test",
+            "certificate_hash": "bdf2fb9775ea6fc74d5498a80a372bd51132cf16"
+          }
+        },
+        {
+          "client_id": "262072346397-n7o3cnm6he6r6m3jp6ij7p5ui9ng34lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuCaFuFpGxMaWau90eFiqmSiB3SqeXKYc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262072346397-n7o3cnm6he6r6m3jp6ij7p5ui9ng34lm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "262072346397-10d9jo0e207g7v6qv2tk2pg041dje0ng.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yrh.app.laoxi.rider.test"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262072346397:android:93d97991fe4ed691",
+        "android_client_info": {
+          "package_name": "com.yrh.app.laoxi.rider.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262072346397-fhjidfde2paqn6hh2m61ndgme27g6npp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yrh.app.laoxi.rider.test",
+            "certificate_hash": "bdf2fb9775ea6fc74d5498a80a372bd51132cf16"
+          }
+        },
+        {
+          "client_id": "262072346397-gatmhi1b6r4girclojhf2c24i701jdan.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yrh.app.laoxi.rider.test",
+            "certificate_hash": "4efe6eba9ab1a56204d1b23875cae1655cca2dcf"
+          }
+        },
+        {
+          "client_id": "262072346397-n7o3cnm6he6r6m3jp6ij7p5ui9ng34lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuCaFuFpGxMaWau90eFiqmSiB3SqeXKYc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262072346397-n7o3cnm6he6r6m3jp6ij7p5ui9ng34lm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "262072346397-10d9jo0e207g7v6qv2tk2pg041dje0ng.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yrh.app.laoxi.rider.test"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

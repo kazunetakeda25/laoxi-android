@@ -1,0 +1,6 @@
+usage:
+
+
+At your BaseActivity paste this code:  ExceptionHandler.register(this, Constant.ERRORLINK);
+
+public static final String ERRORLINK = "http://hyperlinkserver.com/wconnect/ws/crashcall.php?";

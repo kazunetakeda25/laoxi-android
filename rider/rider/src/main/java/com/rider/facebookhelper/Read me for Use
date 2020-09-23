@@ -1,0 +1,36 @@
+Step to use facebook class
+   Step-1 Create application in facebook developer and put application id in String.xml file like below
+            <string name="facebook_app_id">591911500970568</string>
+   Step-2 Add below code in build.gradle.(Application)
+                repositories {
+                        mavenCentral()
+                    }
+                 and
+                compile 'com.facebook.android:facebook-android-sdk:4.1.0'
+   Step-3 Add below code in Manifest file
+            3.1 Permission
+                <uses-permission android:name="android.permission.INTERNET"/>
+            3.2 Application Tag
+                <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+               <activity android:name="com.facebook.FacebookActivity"
+                                                             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                                                             android:label="@string/app_name"
+                                                             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+   Step-4 Paste facebook helper package in your application.
+   Step-5 Paste below code where you want to login with facebook
+            5.1 Create FbHelper object
+                  FbHelper fb = new FbHelper(this, getApplicationContext());
+            5.2 Override onActivityResult and paste below code.
+                       fb.setCallbackManager(requestCode, resultCode, data);
+            5.3 Call onlogin method in onButton click for to perform fb login.
+                    fb.onLogin(new IFacebookTaskComplet<FbResponse>() {
+                                        @Override
+                                        public void onTaskComplete(boolean success, @Nullable FbResponse data) {
+                                            Log.e("Task", "Data " + data.getName());
+                                        }
+                                    });
+
+
+Note :- Step 1,2,3 is for to setup Facebook Sdk.
+
+--------------------------------------------------- Best of Luck -------------------------------------------------------------------------
